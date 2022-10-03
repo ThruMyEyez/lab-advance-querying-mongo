@@ -31,7 +31,7 @@ projection: { name: 1, founded_year: 1}
 <!-- Your Code Goes Here
 
 
-Query: { "ipo.valuation_amount": {$gte: 100000000}, founded_year: {$lte: 2010}
+Query: { "ipo.valuation_amount": {$gte: 100000000}, founded_year: {$lte: 2010} }
 projection: {name: 1, ipo: 1}
  -->
 
@@ -49,6 +49,7 @@ limit: 10
 <!-- Your Code Goes Here
 ???
 Query: { partners: { $exists: false } } // This returns 0 results.. I'm wrong here  somehow. 😕
+Alternate-Querry : { "partners": { $eq: null } } // Alternate to get 0 Results?
 -->
 
 ### 7. All the companies that have a null type of value on the `category_code` field.
